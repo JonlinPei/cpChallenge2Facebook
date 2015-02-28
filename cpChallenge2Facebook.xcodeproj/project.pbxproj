@@ -19,6 +19,7 @@
 		FC5E23571A83254B000F28F1 /* requestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5E23561A83254B000F28F1 /* requestViewController.swift */; };
 		FC5E23591A832557000F28F1 /* moreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5E23581A832557000F28F1 /* moreViewController.swift */; };
 		FC5E235B1A832F68000F28F1 /* ThrillistDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5E235A1A832F68000F28F1 /* ThrillistDetailViewController.swift */; };
+		FCB783D31A9DB1E600C2CFE7 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB783D21A9DB1E600C2CFE7 /* PhotoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		FC5E23561A83254B000F28F1 /* requestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = requestViewController.swift; sourceTree = "<group>"; };
 		FC5E23581A832557000F28F1 /* moreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = moreViewController.swift; sourceTree = "<group>"; };
 		FC5E235A1A832F68000F28F1 /* ThrillistDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThrillistDetailViewController.swift; sourceTree = "<group>"; };
+		FCB783D21A9DB1E600C2CFE7 /* PhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 				FC5E23301A831B21000F28F1 /* AppDelegate.swift */,
 				FC5E23321A831B21000F28F1 /* ViewController.swift */,
 				FC5E23341A831B21000F28F1 /* Main.storyboard */,
+				FCB783D21A9DB1E600C2CFE7 /* PhotoViewController.swift */,
 				FC5E23581A832557000F28F1 /* moreViewController.swift */,
 				FC5E23561A83254B000F28F1 /* requestViewController.swift */,
 				FC5E23541A83253A000F28F1 /* notificationsViewController.swift */,
@@ -235,6 +238,7 @@
 				FC5E23591A832557000F28F1 /* moreViewController.swift in Sources */,
 				FC5E23331A831B21000F28F1 /* ViewController.swift in Sources */,
 				FC5E23531A832528000F28F1 /* messagesViewController.swift in Sources */,
+				FCB783D31A9DB1E600C2CFE7 /* PhotoViewController.swift in Sources */,
 				FC5E23571A83254B000F28F1 /* requestViewController.swift in Sources */,
 				FC5E23311A831B21000F28F1 /* AppDelegate.swift in Sources */,
 				FC5E235B1A832F68000F28F1 /* ThrillistDetailViewController.swift in Sources */,
@@ -360,6 +364,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = cpChallenge2Facebook/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -370,6 +375,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = cpChallenge2Facebook/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -429,6 +435,7 @@
 				FC5E234C1A831B21000F28F1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FC5E234D1A831B21000F28F1 /* Build configuration list for PBXNativeTarget "cpChallenge2FacebookTests" */ = {
 			isa = XCConfigurationList;
@@ -437,6 +444,7 @@
 				FC5E234F1A831B21000F28F1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
