@@ -15,6 +15,7 @@ class feedViewController: UIViewController, UIViewControllerTransitioningDelegat
     
     var selectedImageView: UIImageView!
     var isPresenting: Bool = true
+    var endFrame: CGRect!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -77,21 +78,24 @@ class feedViewController: UIViewController, UIViewControllerTransitioningDelegat
         var window = UIApplication.sharedApplication().keyWindow!
         window.addSubview(movingImageView)
         var startFrame = window.convertRect(selectedImageView.frame, fromView: feedScrollView)
+        endFrame = startFrame
+        
         
 //        println("startFrame x: \(startFrame.frame.center.x); movingImageView y: \(movingImageView.center.y)")
         println("movingImageView x: \(movingImageView.center.x); movingImageView y: \(movingImageView.center.y)")
-        
+
         if (isPresenting) {
             containerView.addSubview(toViewController.view)
             toViewController.view.alpha = 0
             var photoViewController = toViewController as PhotoViewController
+
             
             movingImageView.frame = startFrame
 //            movingImageView.center.x = selectedImageView.center.x
 //            movingImageView.center.y = selectedImageView.center.y
-            
+
 //            movingImageView.frame.size = selectedImageView.frame.size
-            movingImageView.contentMode = .ScaleAspectFit
+            movingImageView.contentMode = .ScaleAspectFill
 //            movingImageView.center.x = selectedImageView.center.x
 //            movingImageView.center.y = selectedImageView.center.y + 110
             
@@ -99,18 +103,26 @@ class feedViewController: UIViewController, UIViewControllerTransitioningDelegat
             UIView.animateWithDuration(0.4, animations: { () -> Void in
                 movingImageView.frame = photoViewController.imageView.frame
                 toViewController.view.alpha = 1
+                photoViewController.imageView.hidden = true
+//                movingImageView.contentMode = .ScaleAspectFit
 
                 println("SelectedImageView center x: \(self.selectedImageView.center.x); selectedImageview center Y: \(self.selectedImageView.center.y)")
                 }) { (finished: Bool) -> Void in
+                    photoViewController.imageView.hidden = false
                     transitionContext.completeTransition(true)
                     movingImageView.removeFromSuperview()
             }
         } else {
+            movingImageView.frame = fromViewController.view.frame
+            movingImageView.contentMode = .ScaleAspectFit
             UIView.animateWithDuration(0.4, animations: { () -> Void in
                 fromViewController.view.alpha = 0
+                movingImageView.frame = self.endFrame
                 }) { (finished: Bool) -> Void in
                     transitionContext.completeTransition(true)
                     fromViewController.view.removeFromSuperview()
+//                    movingImageView.contentMode = .ScaleAspectFill
+                    movingImageView.removeFromSuperview()
             }
         }
 
