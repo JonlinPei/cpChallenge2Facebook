@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FC02CE2A1AA44BE8007613B2 /* BaseTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC02CE281AA44BE8007613B2 /* BaseTransition.swift */; };
+		FC02CE2B1AA44BE8007613B2 /* FadeTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC02CE291AA44BE8007613B2 /* FadeTransition.swift */; };
 		FC5E23311A831B21000F28F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5E23301A831B21000F28F1 /* AppDelegate.swift */; };
 		FC5E23331A831B21000F28F1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5E23321A831B21000F28F1 /* ViewController.swift */; };
 		FC5E23361A831B21000F28F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC5E23341A831B21000F28F1 /* Main.storyboard */; };
@@ -33,6 +35,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FC02CE281AA44BE8007613B2 /* BaseTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTransition.swift; sourceTree = "<group>"; };
+		FC02CE291AA44BE8007613B2 /* FadeTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FadeTransition.swift; sourceTree = "<group>"; };
 		FC5E232B1A831B21000F28F1 /* cpChallenge2Facebook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cpChallenge2Facebook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC5E232F1A831B21000F28F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FC5E23301A831B21000F28F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -96,6 +100,8 @@
 				FC5E23341A831B21000F28F1 /* Main.storyboard */,
 				FCB783D21A9DB1E600C2CFE7 /* PhotoViewController.swift */,
 				FC5E23581A832557000F28F1 /* moreViewController.swift */,
+				FC02CE281AA44BE8007613B2 /* BaseTransition.swift */,
+				FC02CE291AA44BE8007613B2 /* FadeTransition.swift */,
 				FC5E23561A83254B000F28F1 /* requestViewController.swift */,
 				FC5E23541A83253A000F28F1 /* notificationsViewController.swift */,
 				FC5E23521A832528000F28F1 /* messagesViewController.swift */,
@@ -234,10 +240,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC5E23511A832514000F28F1 /* feedViewController.swift in Sources */,
+				FC02CE2A1AA44BE8007613B2 /* BaseTransition.swift in Sources */,
 				FC5E23551A83253A000F28F1 /* notificationsViewController.swift in Sources */,
 				FC5E23591A832557000F28F1 /* moreViewController.swift in Sources */,
 				FC5E23331A831B21000F28F1 /* ViewController.swift in Sources */,
 				FC5E23531A832528000F28F1 /* messagesViewController.swift in Sources */,
+				FC02CE2B1AA44BE8007613B2 /* FadeTransition.swift in Sources */,
 				FCB783D31A9DB1E600C2CFE7 /* PhotoViewController.swift in Sources */,
 				FC5E23571A83254B000F28F1 /* requestViewController.swift in Sources */,
 				FC5E23311A831B21000F28F1 /* AppDelegate.swift in Sources */,

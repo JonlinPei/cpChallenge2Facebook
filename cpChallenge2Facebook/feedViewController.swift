@@ -95,7 +95,7 @@ class feedViewController: UIViewController, UIViewControllerTransitioningDelegat
 //            movingImageView.center.y = selectedImageView.center.y
 
 //            movingImageView.frame.size = selectedImageView.frame.size
-            movingImageView.contentMode = .ScaleAspectFill
+            movingImageView.contentMode = .ScaleAspectFit
 //            movingImageView.center.x = selectedImageView.center.x
 //            movingImageView.center.y = selectedImageView.center.y + 110
             

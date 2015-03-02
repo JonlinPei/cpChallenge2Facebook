@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PhotoViewController: UIViewController, UIScrollViewDelegate {
+class PhotoViewController: UIViewController {
     
     
     @IBOutlet weak var imageView: UIImageView!
@@ -20,8 +20,6 @@ class PhotoViewController: UIViewController, UIScrollViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        photoViewScrollView.delegate = self
-//        photoViewScrollView.contentSize = CGSize(width: 320, height: 700)
 
         imageView.image = image
         imageOriginalCenter = imageView.center
@@ -35,18 +33,16 @@ class PhotoViewController: UIViewController, UIScrollViewDelegate {
     }
     
     @IBAction func doneButtonDidPress(sender: AnyObject) {
-//        imageView.image = nil
         dismissViewControllerAnimated(true, completion: nil)
     }
     
-//    @IBAction func didPanPhoto(sender: UIPanGestureRecognizer) {
-////        dismissViewControllerAnimated(true, completion: nil)
-//    }
     
     @IBAction func didPanImage(sender: UIPanGestureRecognizer) {
-        
-        var offset = (imageView.center.y - imageOriginalCenter.y)
-        
+    
+        var offset = imageView.center.y - imageOriginalCenter.y
+        var location = sender.locationInView(view)
+        var translation = sender.translationInView(view)
+        var velocity = sender.velocityInView(view)
         
         if (sender.state == UIGestureRecognizerState.Began){
             //started to pan
@@ -55,13 +51,24 @@ class PhotoViewController: UIViewController, UIScrollViewDelegate {
         } else if (sender.state == UIGestureRecognizerState.Changed){
             //started to pan
             println("Pan changed")
+            println("location: \(location)")
+            println("translation: \(translation)")
+            println("velocity: \(velocity)")
+            println("offset: \(offset)")
             
-            imageView.transform = CGAffineTransformMakeTranslation(0, offset)
-            
+            imageView.center.y = imageOriginalCenter.y + translation.y
             
         } else if (sender.state == UIGestureRecognizerState.Ended){
             //started to pan
             println("Pan ended")
+            
+            if (offset > 100.0) {
+                dismissViewControllerAnimated(true, completion: nil)
+            } else if (offset <= 100.0) {
+                imageView.center.y = imageOriginalCenter.y
+            }
+            
+            
         }
 
     }
