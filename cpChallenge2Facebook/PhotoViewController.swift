@@ -58,6 +58,7 @@ class PhotoViewController: UIViewController {
             
             imageView.center.y = imageOriginalCenter.y + translation.y
             
+            
         } else if (sender.state == UIGestureRecognizerState.Ended){
             //started to pan
             println("Pan ended")
